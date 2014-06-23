@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Size text to fit container</title>
+  <style>
+    body > div{
+      margin: auto;
+      width: 100px;
+    }
+    body > div > p{
+      /*width: 100px;*/
+      /*padding: 10px;*/
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Size text to fit container</h1>
+  <div>
+    <p>Lorem</p>
+    <p>Lorem ipsum</p>
+    <p>Lorem ipsum dolor</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+
+  <script src="hollebm-size-text-to-fit.js"></script>
+
+  <script>
+    var fitTextContainers = document.querySelectorAll('p');
+    for(var i = 0; i < fitTextContainers.length; i++){
+      // if(i===1)
+        fitTextContainers[i].HolleBMSizeTextToFit = new HolleBMSizeTextToFit(fitTextContainers[i]);
+    }
+  </script>
+</body>
+</html>
